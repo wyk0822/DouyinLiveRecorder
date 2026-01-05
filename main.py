@@ -1568,7 +1568,7 @@ def start_record(url_data: tuple, count_variable: int = -1) -> None:
                                                 error_window.append(1)
 
                                     else:
-                                         filename = anchor_name + f'_{title_in_name}' + now +f"{int(time.time())}"+ ".ts"
+                                        filename = anchor_name + f'_{title_in_name}' + now +f"{int(time.time())}"+ ".ts"
                                         print(f'{rec_info}/{filename}')
                                         save_file_path = full_path + '/' + filename
 
