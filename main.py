@@ -1521,11 +1521,11 @@ def start_record(url_data: tuple, count_variable: int = -1) -> None:
                                 else:
                                     if split_video_by_time:
                                         now = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
-                                        filename = anchor_name + f'_{title_in_name}' + now +f"_{int(time.time())}"+ ".ts"
+                                        filename = anchor_name + f'_{title_in_name}' + now +f"-{int(time.time())}"+ ".ts"
                                         print(f'{rec_info}/{filename}')
 
                                         try:
-                                            save_file_path = f"{full_path}/{anchor_name}_{title_in_name}{now}_%03d.ts"
+                                            save_file_path = f"{full_path}/{anchor_name}_{title_in_name}{now}-{int(time.time())}_%03d.ts"
                                             command = [
                                                 "-c:v", "copy",
                                                 "-c:a", "copy",
@@ -1568,7 +1568,7 @@ def start_record(url_data: tuple, count_variable: int = -1) -> None:
                                                 error_window.append(1)
 
                                     else:
-                                        filename = anchor_name + f'_{title_in_name}' + now +f"_{int(time.time())}"+ ".ts"
+                                        filename = anchor_name + f'_{title_in_name}' + now +f"-{int(time.time())}"+ ".ts"
                                         print(f'{rec_info}/{filename}')
                                         save_file_path = full_path + '/' + filename
 
